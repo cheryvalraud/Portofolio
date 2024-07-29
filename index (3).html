@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0, user-scalable=no>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <div class="intro">
+            <span id="span">
+                <h1>Hello, I'm Valraud Chery</h1>
+                <p>Welcome to my portfolio website.</p>
+            </span>
+        </div>
+    </section>
+
+    <div id="clock-container"> 
+        <div id="clock">00:00:00</div> 
+    </div> 
+
+    <section id="about" class="section">
+        <div id="about-content">
+            <h2 id="about-me">About Me</h2>
+            <p id="text-intro"></p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div id="contact-form">
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="https://formspree.io/f/xkgwjyva" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="text-field" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="text-field" name="email" required>
+                <label for="message" id="message">Message:</label>
+                <textarea id="message" name="message" class="text-field" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="foot">
+        <p>&copy; 2024 Valraud Chery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

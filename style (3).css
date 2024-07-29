@@ -1,0 +1,241 @@
+
+body {
+  background-image: url(lansdcape.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+  background: black;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+#nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+#nav-menu li {
+  margin: 0 15px;
+}
+
+#nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hide the nav menu by default on small screens */
+#nav-menu {
+  display: none; /* Hide the menu by default */
+}
+
+#nav-menu.show {
+  display: flex; /* Show the menu when it has the 'show' class */
+  flex-direction: column; /* Stack nav items vertically */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: black;
+  z-index: 1;
+}
+
+#clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+
+#clock {
+  font-family: monospace;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.intro {
+  margin-top: 50px;
+}
+
+#about-me {
+  color: white;
+}
+
+#about-content {
+  border: solid 2px;
+  width: 100%;
+  max-width: 660px; /* Adjust width for responsiveness */
+  margin: 0 auto; /* Center the element */
+  border-radius: 8px;
+  background-color: #000000;
+  padding: 20px; /* Added padding for better text appearance */
+  overflow: hidden; /* Ensure the text doesn't overflow */
+}
+
+#text-intro {
+  color: #fafdff;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; /* Changed from font-style to font-weight */
+}
+
+#text-intro span {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#text-intro span:nth-child(1) { animation-delay: 0.2s; }
+
+form {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact-form {
+  margin-top: 50px;
+  border: solid 3px;
+  border-color: black;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto 15px; /* Center the element and add bottom margin */
+  background-color: black;
+  color: white;
+  padding: 20px; /* Add padding for spacing inside the form */
+}
+
+.text-field {
+  border-radius: 10px;
+  border-color: #138bbe;
+  border-width: 2px;
+  padding: 10px; /* Add padding inside the text fields */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+form label {
+  display: flex;
+  margin-top: 10px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  background: #0985c3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #70dbf0;
+}
+
+footer {
+  background: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin-top: 50px;
+  transform: translateY(10%);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: flex; /* Show menu toggle button */
+  }
+
+  #nav-menu {
+      display: none; /* Hide navigation items by default */
+      flex-direction: column; /* Stack nav items vertically */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: black;
+      z-index: 1;
+  }
+
+  #nav-menu li {
+      margin: 10px 0; /* Add margin for spacing between items */
+      text-align: center;
+  }
+
+  .section {
+      padding: 20px;
+  }
+
+  #about-content, #contact-form {
+      width: 90%; /* Reduce width on smaller screens */
+  }
+
+  #clock {
+      font-size: 3rem; /* Adjust clock size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #text-intro {
+      font-size: 18px; /* Reduce text size for smaller screens */
+  }
+
+  #clock {
+      font-size: 2.5rem; /* Further adjust clock size for very small screens */
+  }
+}
